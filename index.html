@@ -4,6 +4,7 @@
 <head>
     <title>Ristorante Con Fusion</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -12,7 +13,8 @@
     <header class="jumbotron">
         <!-- The jumbotron component allows you to set apart the content inside the jumbotron from rest of the page-->
         <div class="container">
-            <div class="row">
+            <div class="row row-header">
+                <!-- row and row-header are two names for two different class-->
                 <div class="col-12 col-sm-6">
                     <!--col-12 for Occupy entire row for extra small screen sizes and col-sm-6 for half the row for small to extra large screen sizes-->
                     <h1>Ristorante con Fusion</h1>
@@ -26,7 +28,8 @@
     </header>
 
     <div class="container">
-        <div class="row">
+        <div class="row row-content align-items-center">
+            <!--this align-items-center is a class that is there in bootstrap grid thorugh flexbox suppot -->
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <!--col-12 signifies for Occupy entire row for extra small screen sizes and col-sm-4 signifies 4 columns for small to extra large screen sizes and col-md-3 signifies 3 columns for medium to extra large screen sizes-->
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -39,7 +42,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -49,7 +52,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -61,12 +64,12 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
@@ -84,8 +87,8 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div class="col-12 col-sm-4">
-                    <div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -95,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
