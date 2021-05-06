@@ -11,6 +11,34 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <!-- navbar-dark gives navigation bar with darker background -->
+        <!--navbar-light gives navigation bar with lighter background-->
+        <!--Navbars require a wrapping .navbar with .navbar-expand -sm|-md|-lg|-xl for responsive collapsing and color scheme classes.-->
+        <!--bg-primary is the primary color defined in bootstrap-->
+        <!--fixed-top fixes the navigation bar to the top of the browser-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"><!--navbar-toggler allows you toggle navigation bar-->
+            <!--data-toggle="collapse" is a javascript compinent usage in bootstrap-->
+            <!--data-target="#Navbar" targets to Navbar id-->
+            <span class="navbar-toggler-icon"><!--navbar-toggler-icon shows three lines --></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="./index.html">Ristorante Con Fusion</a>
+            <!--navbar-brand allowing to display things prominently-->
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!--collapse is one of the bootstrap javascripts components-->
+                <ul class="navbar-nav mr-auto">
+                    <!--mr-auto means the right margin will be pushed from right as far as possibler so things will be in the left-->
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <!--nav-item aloows lists to be displayed horizontally-->
+                    <!--active helps to display active page-->
+                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -25,6 +53,13 @@
     </header>
     <div class="container">
         <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">About Us</li>
+
+            </ol>
             <div class="col-12">
                 <h3>About Us</h3>
                 <hr>
@@ -62,7 +97,7 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
