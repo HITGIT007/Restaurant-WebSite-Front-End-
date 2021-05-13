@@ -45,9 +45,9 @@
                     </span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login
-                </a>
+                    <!--jQuery implementation to show login form instead of data dismiss modal-->
+                <a id="buttonLogin" type="button" role="button">
+                        <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -66,7 +66,8 @@
                 <div class="col-12 col-sm">
                     <div class="col col-sm align-self-center" style="text-align: center;">
                         <img src="img/logo.png" class="img-fluid align-left" alt="logo"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a type="button" class="btn btn-warning align-right" data-toggle="modal" data-target="#reservationFormModal" role="button">Reserve Table</a>
+                        <a id="buttonReservation" type="button" class="btn btn-warning align-right" role="button">Reserve Table</a>
+                        <!--jQuery implementation to show login form instead of data dismiss modal-->
 
                     </div>
 
@@ -78,39 +79,33 @@
 
     </header>
     <div id="loginModal" class="modal fade" role="dialog">
-        <!--role="dialog" means it will be displayed at the top of the page-->
         <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal"><!--This button will be used to dimmiss the modal-->
-                        &times;<!-- This will be used to dispaly the Close button--> 
-                    </button>
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
                         </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
                         </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
                 </div>
             </div>
         </div>
@@ -167,13 +162,13 @@
                             <label for="lastname" class="col-md-2 col-form-label">Date and Time</label>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i>&nbsp;</span>
+                                    <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                     <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>&nbsp;</span>
+                                    <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                                     <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
                                 </div>
                             </div>
@@ -350,27 +345,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js "></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js "></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
-    <script>
-        $(document).ready(function() {
-            $("#mycarousel").carousel({
-                interval: 2000
-            });
-            $("#carouselButton").click(function() {
-                if ($("#carouselButton").children('span').hasClass('fa-pause')) {
-
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children('span').removeClass('fa-pause');
-                    $("#carouselButton").children('span').addClass('fa-play');
-                } else {
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children('span').removeClass('fa-play');
-                    $("#carouselButton").children('span').addClass('fa-pause');
-                }
-
-            });
-
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
