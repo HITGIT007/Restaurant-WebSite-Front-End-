@@ -35,7 +35,7 @@
         "grunt-filerev": "^2.3.1",
         "grunt-sass": "^2.1.0",
         "grunt-usemin": "^3.1.1",
-        "gulp": "^4.0.0",
+        "gulp": "^4.0.2",
         "gulp-clean-css": "^3.9.3",
         "gulp-flatmap": "^1.0.2",
         "gulp-htmlmin": "^4.0.0",
@@ -61,8 +61,5 @@
         "font-awesome": "^4.7.0",
         "jquery": "^3.6.0",
         "popper.js": "^1.14.3"
-    },
-    "resolutions": {
-        "graceful-fs": "^4.2.4"
     }
 }
